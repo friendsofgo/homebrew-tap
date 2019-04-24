@@ -5,7 +5,7 @@ class Killgrave < Formula
   homepage ""
   url "https://github.com/friendsofgo/killgrave/releases/download/v0.2.0/killgrave_0.2.0_darwin_x86_64.tar.gz"
   version "0.2.0"
-  sha256 "941e08bdb97c72b0647108658615cab935b3d025489d7bf734b93ca71d2920c3"
+  sha256 "aec582a53d673329af84362bac12f93f60a7cdf5244d18549c1818cbaa0eec0b"
 
   def install
     bin.install "killgrave"
