@@ -3,9 +3,9 @@ class Killgrave < Formula
   desc "Simple way to generate fake servers
 "
   homepage ""
-  url "https://github.com/friendsofgo/killgrave/releases/download/v0.3.1/killgrave_0.3.1_darwin_x86_64.tar.gz"
-  version "0.3.1"
-  sha256 "bb92255eda1d5b917e6fec8ff862890f41317cbc743450292b2911450c983af5"
+  url "https://github.com/friendsofgo/killgrave/releases/download/v0.3.2/killgrave_0.3.2_darwin_x86_64.tar.gz"
+  version "0.3.2"
+  sha256 "5eff5662610d019fd645fa237c7bfd49f90a85ef7602497b7fbbe90af76f5354"
 
   def install
     bin.install "killgrave"
