@@ -3,9 +3,27 @@ class Killgrave < Formula
   desc "Simple way to generate fake servers
 "
   homepage ""
-  url "https://github.com/friendsofgo/killgrave/releases/download/v0.3.3/killgrave_0.3.3_darwin_x86_64.tar.gz"
-  version "0.3.3"
-  sha256 "221a09f94a2dc06ddb385f2061dccf30f88305ceb2edd406e01568fd80cef175"
+  version "0.4.0"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/friendsofgo/killgrave/releases/download/v0.4.0/killgrave_0.4.0_darwin_x86_64.tar.gz"
+    sha256 "66e422417984cb498bcf203fb0e849a96f5ecbe343ec73a7c7ec848ea970d8b3"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/friendsofgo/killgrave/releases/download/v0.4.0/killgrave_0.4.0_linux_x86_64.tar.gz"
+      sha256 "e1fadba44769aa0fe44461a5372d8408ee0ba0b386c174f0a742191e37f4067b"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/friendsofgo/killgrave/releases/download/v0.4.0/killgrave_0.4.0_linux_arm64.tar.gz"
+        sha256 "68cab93e4c3eae1f32c43b6136b54a2f09499c4b4d1c6e4043d5e4cf25ec1512"
+      else
+        url "https://github.com/friendsofgo/killgrave/releases/download/v0.4.0/killgrave_0.4.0_linux_armv6.tar.gz"
+        sha256 "d2ce09b75d26e6ea4ec4621390040111d46dfd4c615cda81ea146e5dd0ae5839"
+      end
+    end
+  end
 
   def install
     bin.install "killgrave"
