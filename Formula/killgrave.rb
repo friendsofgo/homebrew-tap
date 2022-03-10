@@ -7,7 +7,6 @@ class Killgrave < Formula
 "
   homepage ""
   version "0.4.1"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/friendsofgo/killgrave/releases/download/v0.4.1/killgrave_0.4.1_darwin_x86_64.tar.gz"
