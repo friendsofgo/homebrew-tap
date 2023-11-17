@@ -6,20 +6,20 @@ class Killgrave < Formula
   desc "Simple way to generate fake servers
 "
   homepage ""
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.0/killgrave_0.5.0_darwin_x86_64.tar.gz"
-      sha256 "38bcb0c3899bc1344f8a283e3a4cdf7935faa7baf81adc1246ed21cd03abe30c"
+    if Hardware::CPU.arm?
+      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.1/killgrave_ 0.5.1_ darwin_arm64.tar.gz"
+      sha256 "baac489f38badb314f016a5b058662b0f1657a352ff900e1e65ccf90c26aed74"
 
       def install
         bin.install "killgrave"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.0/killgrave_0.5.0_darwin_arm64.tar.gz"
-      sha256 "f9191a8014a16f319c5f457c630f5a8f99af1ba9e3f7b704675fda04003047a8"
+    if Hardware::CPU.intel?
+      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.1/killgrave_ 0.5.1_ darwin_x86_64.tar.gz"
+      sha256 "1e84bd381da1bac97b0831ec215c15cc8146bc5c903feda3ca7bc65db6a436d4"
 
       def install
         bin.install "killgrave"
@@ -28,25 +28,25 @@ class Killgrave < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.1/killgrave_ 0.5.1_ linux_x86_64.tar.gz"
+      sha256 "6901de023a05c086b6454ed508c60517c15b59286c764b3d86b5d51eedbaba32"
+
+      def install
+        bin.install "killgrave"
+      end
+    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.0/killgrave_0.5.0_linux_armv6.tar.gz"
-      sha256 "03a6413996f4e71628ce05f986a08027b179cc4b488694d9b9bbea01708ddc74"
+      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.1/killgrave_ 0.5.1_ linux_armv6.tar.gz"
+      sha256 "da35ed469fb7320fadb0801675c507c5de465dde003b7a281ae33cc7069aa5fb"
 
       def install
         bin.install "killgrave"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.0/killgrave_0.5.0_linux_arm64.tar.gz"
-      sha256 "577d2c04cd9223492240931d466a1eb28d327fe954749f6ea24c6a3841a19b7c"
-
-      def install
-        bin.install "killgrave"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.0/killgrave_0.5.0_linux_x86_64.tar.gz"
-      sha256 "48a32c8178de898f1cc0bd7b21ac86cdb3d7063bf5afae2469b31d24d0a04e1d"
+      url "https://github.com/friendsofgo/killgrave/releases/download/v0.5.1/killgrave_ 0.5.1_ linux_arm64.tar.gz"
+      sha256 "1ecf10f8e841286dd6237eae8221577fd99b333a79175c363a1106031efd4e4b"
 
       def install
         bin.install "killgrave"
